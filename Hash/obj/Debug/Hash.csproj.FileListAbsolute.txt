@@ -1,0 +1,6 @@
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\bin\Debug\Hash.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\bin\Debug\Hash.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\obj\Debug\Hash.csproj.AssemblyReference.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\obj\Debug\Hash.csproj.CoreCompileInputs.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\obj\Debug\Hash.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\Hash\obj\Debug\Hash.pdb

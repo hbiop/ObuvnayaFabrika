@@ -35,9 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,6 +73,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -78,6 +88,34 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Authorizacia.cs" />
+    <Compile Include="Model\Brigadi.cs" />
+    <Compile Include="Model\Ceh.cs" />
+    <Compile Include="Model\CehPartia.cs" />
+    <Compile Include="Model\Clienti.cs" />
+    <Compile Include="Model\Cvet.cs" />
+    <Compile Include="Model\Etapi.cs" />
+    <Compile Include="Model\Gorod.cs" />
+    <Compile Include="Model\Kategorii.cs" />
+    <Compile Include="Model\Materiali.cs" />
+    <Compile Include="Model\MaterialNakladnaya.cs" />
+    <Compile Include="Model\MaterialNaSklade.cs" />
+    <Compile Include="Model\Nakladnaya.cs" />
+    <Compile Include="Model\ObuvnajaFabrikaEntity.cs" />
+    <Compile Include="Model\Otzivi.cs" />
+    <Compile Include="Model\Partia.cs" />
+    <Compile Include="Model\Postavshiki.cs" />
+    <Compile Include="Model\Prodaji.cs" />
+    <Compile Include="Model\Sklad.cs" />
+    <Compile Include="Model\Sotrudniki.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\sysdiagrams.cs" />
+    <Compile Include="Model\Tovar.cs" />
+    <Compile Include="Model\TovarMaterial.cs" />
+    <Compile Include="Model\TovarNaSklade.cs" />
+    <Compile Include="Model\TovarRazmer.cs" />
+    <Compile Include="Model\Ulici.cs" />
+    <Compile Include="Model\Zakaz.cs" />
     <Compile Include="Pages\Autho.xaml.cs">
       <DependentUpon>Autho.xaml</DependentUpon>
     </Compile>
@@ -101,6 +139,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,9 +148,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Vector.png" />
   </ItemGroup>

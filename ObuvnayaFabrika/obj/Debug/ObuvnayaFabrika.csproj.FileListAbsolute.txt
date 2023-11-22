@@ -18,3 +18,29 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika\ObuvnayaFabrika\obj\Debug\App.baml
 C:\college\разработка программных модулей\ObuvnayaFabrika\ObuvnayaFabrika\obj\Debug\Pages\Autho.baml
 C:\college\разработка программных модулей\ObuvnayaFabrika\ObuvnayaFabrika\obj\Debug\Pages\Client.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.AssemblyReference.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\MainWindow.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\Pages\Autho.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\Pages\Client.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\App.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika_MarkupCompile.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika_MarkupCompile.lref
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.exe
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\ObuvnayaFabrika.exe.config
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\ObuvnayaFabrika.exe
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\ObuvnayaFabrika.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\EntityFramework.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\EntityFramework.SqlServer.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\EntityFramework.xml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\EntityFramework.SqlServer.xml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\bin\Debug\ru\EntityFramework.resources.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\App.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\MainWindow.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\Pages\Autho.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\Pages\Client.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.g.resources
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.Properties.Resources.resources
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.GenerateResource.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.CoreCompileInputs.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — копия — копия — копия — копия\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.CopyComplete
