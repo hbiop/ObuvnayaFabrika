@@ -23,7 +23,7 @@ namespace AddPassword
                 int KodSotrudnika = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Введите логин:   ");
                 string login = Console.ReadLine();
-                Console.WriteLine("Введите пароль:   ")
+                Console.WriteLine("Введите пароль:   ");
                 string password = Console.ReadLine();
                 string HashPasswd = Hash.Hash.HashPassword(password);
                 //Authorization.KodAuthorizacii = 1;
