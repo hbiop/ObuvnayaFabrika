@@ -1,5 +1,5 @@
 ﻿
-using ObuvnayaFabrika.Model;
+using ObuvnayaFabrika.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +10,13 @@ namespace ObuvnayaFabrika
 {
     public class Helper
     {
-        private static ObuvnajaFabrikaEntity obuvnayaFabrikaModel;
+        private static ObuvnajaFabricaEntity obuvnayaFabrikaModel;
 
-        public static ObuvnajaFabrikaEntity GetContext()
+        public static ObuvnajaFabricaEntity GetContext()
         {
             if(obuvnayaFabrikaModel == null)
             {
-                obuvnayaFabrikaModel = new ObuvnajaFabrikaEntity();
+                obuvnayaFabrikaModel = new ObuvnajaFabricaEntity();
             }
             return obuvnayaFabrikaModel;
         }

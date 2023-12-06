@@ -26,6 +26,7 @@ namespace ObuvnayaFabrika
         {
             InitializeComponent();
             FrmMain.Navigate(new Autho());
+
         }
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {

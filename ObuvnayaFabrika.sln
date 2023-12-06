@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hash", "Hash\Hash.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddPassword", "AddPassword\AddPassword.csproj", "{2097C789-E46F-4695-B80C-40CB558FF9AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Captcha", "Captcha\Captcha.csproj", "{2E9C011F-45EB-4414-BF24-D8A84238A647}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2097C789-E46F-4695-B80C-40CB558FF9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2097C789-E46F-4695-B80C-40CB558FF9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2097C789-E46F-4695-B80C-40CB558FF9AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9C011F-45EB-4414-BF24-D8A84238A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9C011F-45EB-4414-BF24-D8A84238A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9C011F-45EB-4414-BF24-D8A84238A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9C011F-45EB-4414-BF24-D8A84238A647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

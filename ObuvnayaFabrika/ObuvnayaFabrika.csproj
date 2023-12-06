@@ -78,6 +78,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Autho.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,41 +90,52 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\polzovatel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Authorizacia.cs" />
-    <Compile Include="Model\Brigadi.cs" />
-    <Compile Include="Model\Ceh.cs" />
-    <Compile Include="Model\CehPartia.cs" />
-    <Compile Include="Model\Clienti.cs" />
-    <Compile Include="Model\Cvet.cs" />
-    <Compile Include="Model\Etapi.cs" />
-    <Compile Include="Model\Gorod.cs" />
-    <Compile Include="Model\Kategorii.cs" />
-    <Compile Include="Model\Materiali.cs" />
-    <Compile Include="Model\MaterialNakladnaya.cs" />
-    <Compile Include="Model\MaterialNaSklade.cs" />
-    <Compile Include="Model\Nakladnaya.cs" />
-    <Compile Include="Model\ObuvnajaFabrikaEntity.cs" />
-    <Compile Include="Model\Otzivi.cs" />
-    <Compile Include="Model\Partia.cs" />
-    <Compile Include="Model\Postavshiki.cs" />
-    <Compile Include="Model\Prodaji.cs" />
-    <Compile Include="Model\Sklad.cs" />
-    <Compile Include="Model\Sotrudniki.cs" />
-    <Compile Include="Model\Status.cs" />
-    <Compile Include="Model\sysdiagrams.cs" />
-    <Compile Include="Model\Tovar.cs" />
-    <Compile Include="Model\TovarMaterial.cs" />
-    <Compile Include="Model\TovarNaSklade.cs" />
-    <Compile Include="Model\TovarRazmer.cs" />
-    <Compile Include="Model\Ulici.cs" />
-    <Compile Include="Model\Zakaz.cs" />
+    <Compile Include="models\Authorizacia.cs" />
+    <Compile Include="models\Brigadi.cs" />
+    <Compile Include="models\Ceh.cs" />
+    <Compile Include="models\CehPartia.cs" />
+    <Compile Include="models\Clienti.cs" />
+    <Compile Include="models\Cvet.cs" />
+    <Compile Include="models\Etapi.cs" />
+    <Compile Include="models\Gorod.cs" />
+    <Compile Include="models\Kategorii.cs" />
+    <Compile Include="models\Materiali.cs" />
+    <Compile Include="models\MaterialNakladnaya.cs" />
+    <Compile Include="models\MaterialNaSklade.cs" />
+    <Compile Include="models\Nakladnaya.cs" />
+    <Compile Include="models\ObuvnajaFabricaEntity.cs" />
+    <Compile Include="models\Otzivi.cs" />
+    <Compile Include="models\Partia.cs" />
+    <Compile Include="models\Postavshiki.cs" />
+    <Compile Include="models\Prodaji.cs" />
+    <Compile Include="models\Roli.cs" />
+    <Compile Include="models\Sklad.cs" />
+    <Compile Include="models\Sotrudniki.cs" />
+    <Compile Include="models\Status.cs" />
+    <Compile Include="models\sysdiagrams.cs" />
+    <Compile Include="models\Tovar.cs" />
+    <Compile Include="models\TovarMaterial.cs" />
+    <Compile Include="models\TovarNaSklade.cs" />
+    <Compile Include="models\TovarRazmer.cs" />
+    <Compile Include="models\Ulici.cs" />
+    <Compile Include="models\Zakaz.cs" />
+    <Compile Include="Pages\admin.xaml.cs">
+      <DependentUpon>admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Autho.xaml.cs">
       <DependentUpon>Autho.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Client.xaml.cs">
       <DependentUpon>Client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\polzovatel.xaml.cs">
+      <DependentUpon>polzovatel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -148,7 +163,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Captcha\Captcha.csproj">
+      <Project>{2e9c011f-45eb-4414-bf24-d8a84238a647}</Project>
+      <Name>Captcha</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hash\Hash.csproj">
+      <Project>{443e67fa-0231-4fa1-9a76-ec73c62094ee}</Project>
+      <Name>Hash</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Vector.png" />
   </ItemGroup>

@@ -70,3 +70,11 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.CopyComplete
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.exe
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\Captcha.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\Captcha.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\Hash.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\Hash.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\admin.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\admin.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\polzovatel.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\polzovatel.baml
