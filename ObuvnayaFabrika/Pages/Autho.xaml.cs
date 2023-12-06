@@ -1,4 +1,4 @@
-﻿using ObuvnayaFabrika.Model;
+﻿using ObuvnayaFabrika.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Captcha;
+using Hash;
 namespace ObuvnayaFabrika.Pages
 {
     /// <summary>
@@ -33,7 +34,7 @@ namespace ObuvnayaFabrika.Pages
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             string login = txtlogin.Text.Trim();
-            string password = BoxPassword.Password.Trim();
+            string password =Hash.Hash.HashPassword( BoxPassword.Password.Trim());
             if (login.Length > 0 && password.Length > 0)
             {
                 if (unsuccesful < 1)
@@ -41,12 +42,24 @@ namespace ObuvnayaFabrika.Pages
                     var User = Helper.GetContext().Authorizacia.Where(t => t.Login == login && t.Parol == password).FirstOrDefault();
                     if (User != null)
                     {
-                        
+                        var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
+                        int KodRoli = Polzovatel.KodRoli;
+                        switch (KodRoli)
+                        {
+                            case 1:
+                                this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
+                                break;
+                            case 2:
+                                this.NavigationService.Navigate(new Uri("Pages/admin.xaml", UriKind.Relative));
+                                break;
+                        }
                     }
                     else
                     {
                         unsuccesful++;
                         MessageBox.Show("Пользователь с таким логином не найден", "Внимание", MessageBoxButton.OK);
+                        txtlogin.Text = null;
+                        BoxPassword.Password = null;
                         GetCaptcha();
                     }
                 }
@@ -56,7 +69,32 @@ namespace ObuvnayaFabrika.Pages
                     var User = Helper.GetContext().Authorizacia.Where(t => t.Login == login && t.Parol == password).FirstOrDefault();
                     if (User != null && captca == txtBlockCaptcha.Text)
                     {
-                    
+                        var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
+                        int KodRoli = Polzovatel.KodRoli;
+                        switch(KodRoli)
+                        {
+                            case 1:
+                                this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
+                                break;
+                            case 2:
+                                this.NavigationService.Navigate(new Uri("Pages/admin.xaml", UriKind.Relative));
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        if(captca != txtBlockCaptcha.Text)
+                        {
+                            MessageBox.Show("Капча введена неверно", "Внимание", MessageBoxButton.OK);
+                        }
+                        if(User == null)
+                        {
+                            MessageBox.Show("Пользователь с таким логином не найден", "Внимание", MessageBoxButton.OK);
+                        }
+                        txtlogin.Text = null;
+                        BoxPassword.Password = null;
+                        txtboxCaptcha.Text = null;
+                        GetCaptcha();
                     }
                 }
             }
@@ -69,14 +107,9 @@ namespace ObuvnayaFabrika.Pages
         {
             txtboxCaptcha.Visibility = Visibility.Visible;
             txtBlockCaptcha.Visibility = Visibility.Visible;
-            Random random = new Random();
-            int RandNum = random.Next(0, 3);
-            switch(RandNum)
-            {
-                case 1:
-                    TextBlock.Ca
-                    break;
-            }
+            string captcha = Captcha.Captcha.GenerateCaptca();
+            txtBlockCaptcha.TextDecorations = TextDecorations.Strikethrough;
+            txtBlockCaptcha.Text = captcha;
         }
     }
 }

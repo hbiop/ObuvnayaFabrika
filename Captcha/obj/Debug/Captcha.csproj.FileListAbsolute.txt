@@ -1,0 +1,6 @@
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\bin\Debug\Captcha.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\bin\Debug\Captcha.pdb
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\obj\Debug\Captcha.csproj.AssemblyReference.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\obj\Debug\Captcha.csproj.CoreCompileInputs.cache
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\obj\Debug\Captcha.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\Captcha\obj\Debug\Captcha.pdb
