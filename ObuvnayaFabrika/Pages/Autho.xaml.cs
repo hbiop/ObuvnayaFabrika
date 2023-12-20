@@ -18,6 +18,7 @@ using Hash;
 using System.Windows.Threading;
 using System.Threading;
 using System.Timers;
+using System.Xml.Linq;
 namespace ObuvnayaFabrika.Pages
 {
     /// <summary>
@@ -40,46 +41,55 @@ namespace ObuvnayaFabrika.Pages
         {
             string login = txtlogin.Text.Trim();
             string password =Hash.Hash.HashPassword( BoxPassword.Password.Trim());
-            if (login.Length > 0 && password.Length > 0)
+            if (DateTime.Now.Hour < 19 || DateTime.Now.Hour > 10)
             {
-                if (unsuccesful < 1)
+                if (login.Length > 0 && password.Length > 0)
                 {
-                    var User = Helper.GetContext().Authorizacia.Where(t => t.Login == login && t.Parol == password).FirstOrDefault();
-                    if (User != null)
+                    if (unsuccesful < 1)
                     {
-                        var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
-                        int KodRoli = Polzovatel.KodRoli;
-                        switch (KodRoli)
+                        var User = Helper.GetContext().Authorizacia.Where(t => t.Login == login && t.Parol == password).FirstOrDefault();
+                        if (User != null)
                         {
-                            case 1:
-                                this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
-                                break;
-                            case 2:
-                                this.NavigationService.Navigate(new Uri("Pages/admin.xaml", UriKind.Relative));
-                                break;
-                        }
+                            var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
+                            string Fio = Polzovatel.Imia + " " + Polzovatel.Familia + " " + Polzovatel.Otchestvo;
+                            int KodRoli = Polzovatel.KodRoli;
+                            switch (KodRoli)
+                            {
+                                case 1:
+                                    polzovatel Polzovatel2 = new polzovatel(Fio);
+                                    this.NavigationService.Navigate(Polzovatel2);
+                                    //this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
+                                    break;
+                                case 2:
+                                    admin Admin = new admin(Fio);
+                                    this.NavigationService.Navigate(Admin);
+                                    //this.NavigationService.Navigate(new Uri("Pages/admin.xaml", UriKind.Relative));
+                                    break;
+                            }
 
+                        }
+                        else
+                        {
+                            unsuccesful++;
+                            MessageBox.Show("Пользователь с таким логином не найден", "Внимание", MessageBoxButton.OK);
+                            txtlogin.Text = null;
+                            BoxPassword.Password = null;
+                            GetCaptcha();
+                        }
                     }
                     else
                     {
-                        unsuccesful++;
-                        MessageBox.Show("Пользователь с таким логином не найден", "Внимание", MessageBoxButton.OK);
-                        txtlogin.Text = null;
-                        BoxPassword.Password = null;
-                        GetCaptcha();
-                    }
-                }
-                else
-                {
                         string captca = txtboxCaptcha.Text;
                         var User = Helper.GetContext().Authorizacia.Where(t => t.Login == login && t.Parol == password).FirstOrDefault();
                         if (User != null && captca == txtBlockCaptcha.Text)
                         {
                             var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
+                            string Fio = Polzovatel.Imia + " " + Polzovatel.Familia + " " + Polzovatel.Otchestvo;
                             int KodRoli = Polzovatel.KodRoli;
                             switch (KodRoli)
                             {
                                 case 1:
+                                    polzovatel Polzovatel2 = new polzovatel(Fio);
                                     this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
                                     break;
                                 case 2:
@@ -102,16 +112,21 @@ namespace ObuvnayaFabrika.Pages
                             txtboxCaptcha.Text = null;
                             unsuccesful++;
                             GetCaptcha();
-                        if (unsuccesful >= 3)
-                        {
-                            startTimer();
+                            if (unsuccesful >= 3)
+                            {
+                                startTimer();
+                            }
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Не все поля заполнены");
                 }
             }
             else
             {
-                MessageBox.Show("Не все поля заполнены");
+                MessageBox.Show("Рабочее время не началось");
             }
         }
         private void GetCaptcha()

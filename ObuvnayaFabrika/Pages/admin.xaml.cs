@@ -20,9 +20,28 @@ namespace ObuvnayaFabrika.Pages
     /// </summary>
     public partial class admin : Page
     {
-        public admin()
+
+        public admin(string Fio)
         {
             InitializeComponent();
+            getTime(label, Fio);
+            
+        }
+        private static void getTime(Label label, string Fio)
+        {
+            if(DateTime.Now.Hour  < 12)
+            {
+                label.Content = "Доброе утро,  " + Fio;
+            }
+            if(DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 17)
+            {
+                label.Content = "Доброе день,  " + Fio;
+            }
+            if (DateTime.Now.Hour >= 17)
+            {
+                label.Content = "Доброе вечер,  " + Fio;
+            }
         }
     }
+    
 }

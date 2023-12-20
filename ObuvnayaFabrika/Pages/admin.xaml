@@ -10,6 +10,7 @@
 
     <Grid>
         <Label Content="Admin" HorizontalAlignment="Left" Margin="348,170,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="290,243,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

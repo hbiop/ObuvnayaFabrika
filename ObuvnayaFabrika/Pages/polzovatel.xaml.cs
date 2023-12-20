@@ -24,5 +24,10 @@ namespace ObuvnayaFabrika.Pages
         {
             InitializeComponent();
         }
+        public polzovatel(string Fio)
+        {
+            InitializeComponent();
+            label.Content = Fio;
+        }
     }
 }
