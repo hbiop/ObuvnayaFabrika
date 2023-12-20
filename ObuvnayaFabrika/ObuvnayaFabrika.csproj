@@ -94,6 +94,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\SpisokPolzovateley.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="models\Authorizacia.cs" />
@@ -136,6 +140,9 @@
     </Compile>
     <Compile Include="Pages\polzovatel.xaml.cs">
       <DependentUpon>polzovatel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpisokPolzovateley.xaml.cs">
+      <DependentUpon>SpisokPolzovateley.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

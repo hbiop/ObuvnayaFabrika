@@ -11,6 +11,7 @@
     <Grid>
         <Label Content="Admin" HorizontalAlignment="Left" Margin="348,170,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="290,243,0,0" VerticalAlignment="Top"/>
+        <Button Content="Список сотрудников" HorizontalAlignment="Left" Margin="580,104,0,0" VerticalAlignment="Top" Height="38" Width="190" Click="Button_Click"/>
 
     </Grid>
 </Page>

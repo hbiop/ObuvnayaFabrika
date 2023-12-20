@@ -27,6 +27,7 @@ namespace ObuvnayaFabrika.Pages
             getTime(label, Fio);
             
         }
+ 
         private static void getTime(Label label, string Fio)
         {
             if(DateTime.Now.Hour  < 12)
@@ -41,6 +42,11 @@ namespace ObuvnayaFabrika.Pages
             {
                 label.Content = "Доброе вечер,  " + Fio;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateley.xaml", UriKind.Relative));
         }
     }
     
