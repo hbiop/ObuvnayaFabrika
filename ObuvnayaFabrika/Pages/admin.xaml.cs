@@ -48,6 +48,11 @@ namespace ObuvnayaFabrika.Pages
         {
             this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateley.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateleyReal.xaml", UriKind.Relative));
+        }
     }
     
 }
