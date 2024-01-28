@@ -82,5 +82,7 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\SpisokPolzovateley.baml
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\SpisokPolzovateleyNew.g.cs
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\SpisokPolzovateleyNew.baml
-C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\SpisokPolzovateleyReal.g.cs
-C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\SpisokPolzovateleyReal.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\TecushiyPolzovatel.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\TecushiyPolzovatel.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\DobavitPolzovatelia.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\DobavitPolzovatelia.baml

@@ -90,11 +90,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\polzovatel.xaml">
+    <Page Include="Pages\DobavitPolzovatelia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SpisokPolzovateley.xaml">
+    <Page Include="Pages\polzovatel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,7 +102,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SpisokPolzovateleyReal.xaml">
+    <Page Include="Pages\SpisokPolzovateley.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TecushiyPolzovatel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,17 +150,20 @@
     <Compile Include="Pages\Client.xaml.cs">
       <DependentUpon>Client.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DobavitPolzovatelia.xaml.cs">
+      <DependentUpon>DobavitPolzovatelia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\polzovatel.xaml.cs">
       <DependentUpon>polzovatel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SpisokPolzovateley.xaml.cs">
-      <DependentUpon>SpisokPolzovateley.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SpisokPolzovateleyNew.xaml.cs">
       <DependentUpon>SpisokPolzovateleyNew.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SpisokPolzovateleyReal.xaml.cs">
-      <DependentUpon>SpisokPolzovateleyReal.xaml</DependentUpon>
+    <Compile Include="Pages\SpisokPolzovateley.xaml.cs">
+      <DependentUpon>SpisokPolzovateley.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TecushiyPolzovatel.xaml.cs">
+      <DependentUpon>TecushiyPolzovatel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -174,6 +181,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -196,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

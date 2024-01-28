@@ -9,10 +9,16 @@
       Title="admin" Background="White">
 
     <Grid>
-        <Label Content="Admin" HorizontalAlignment="Left" Margin="348,170,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="Admin" HorizontalAlignment="Left" Margin="290,243,0,0" VerticalAlignment="Top"/>
-        <Button Content="Список сотрудников" HorizontalAlignment="Left" Margin="580,104,0,0" VerticalAlignment="Top" Height="38" Width="190" Click="Button_Click"/>
-        <Button Content="Список сотрудников 2" HorizontalAlignment="Left" Margin="580,183,0,0" VerticalAlignment="Top" Height="42" Width="190" Click="Button_Click_1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Content="Admin" HorizontalAlignment="Center" Margin="0,186,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" x:Name="label" Content="Admin" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="180,391,0,0"/>
+        <Button Grid.Column="2"  Content="Список сотрудников" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="38" Width="190" Click="Button_Click"/>
+        <Button Grid.Column="2" Content="Список сотрудников 2" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="42" Width="190" Click="Button_Click_1"/>
+        <Button Grid.Column="2" Content="Добавить" Click="Button_Click_2" HorizontalAlignment="Center" Margin="0,225,0,0" VerticalAlignment="Top" Height="43" Width="190"/>
 
     </Grid>
 </Page>

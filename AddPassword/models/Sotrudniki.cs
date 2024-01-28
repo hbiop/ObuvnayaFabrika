@@ -22,22 +22,27 @@ namespace AddPassword.models
         [StringLength(50)]
         public string Imia { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Familia { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Otchestvo { get; set; }
 
+        [Required]
         [StringLength(20)]
         public string NomerTelefona { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Pochta { get; set; }
 
+        [Required]
         public int? Brigada { get; set; }
-
+        [Required]
         public int KodParolia { get; set; }
-
+        [Required]
         public int KodRoli { get; set; }
 
         public virtual Authorizacia Authorizacia { get; set; }

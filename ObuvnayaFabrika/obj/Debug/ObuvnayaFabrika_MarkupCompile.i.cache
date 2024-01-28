@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\App.xaml
-8-246997603
+9-1503351889
 
-43-142749253
+44-79151831
 21-2109462934
-MainWindow.xaml;Pages\admin.xaml;Pages\Autho.xaml;Pages\Client.xaml;Pages\polzovatel.xaml;Pages\SpisokPolzovateley.xaml;Pages\SpisokPolzovateleyNew.xaml;Pages\SpisokPolzovateleyReal.xaml;
+MainWindow.xaml;Pages\admin.xaml;Pages\Autho.xaml;Pages\Client.xaml;Pages\DobavitPolzovatelia.xaml;Pages\polzovatel.xaml;Pages\SpisokPolzovateleyNew.xaml;Pages\SpisokPolzovateley.xaml;Pages\TecushiyPolzovatel.xaml;
 
-True
+False
 

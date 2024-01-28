@@ -1,55 +1,62 @@
-﻿<Window x:Class="ObuvnayaFabrika.Pages.SpisokPolzovateleyNew"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ObuvnayaFabrika.Pages"
-        mc:Ignorable="d"
-        Title="SpisokPolzovateleyNew" Height="450" Width="800">
+﻿<Page x:Class="ObuvnayaFabrika.Pages.SomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ObuvnayaFabrika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SomePage">
+    <Page.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <StackPanel Margin="5" Width="100" Height="200">
+                <Image Width="80" Height="80" Source="/Resources/User.png"  />
+                <TextBlock FontSize="16" Text="{Binding Imia}" HorizontalAlignment="Center" />
+                <TextBlock FontSize="16" Text="{Binding Familia}" HorizontalAlignment="Center" />
+                <TextBlock FontSize="16" Text="{Binding Otchestvo}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="listPanelTemplate">
+            <WrapPanel />
+        </ItemsPanelTemplate>
+    </Page.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="80*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="56"/>
-            <RowDefinition/>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            
         </Grid.RowDefinitions>
-        <TextBox Name="txtSearch" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5, 0, 5, 0"/>
-        <ComboBox Name="cmbSortting" Grid.Row="1" Grid.Column="1" SelectedIndex="0" VerticalAlignment="Center"  Margin="5, 0, 5, 0"/>
-        <ComboBox Name="cmbFilter" Grid.Row="1" Grid.Column="2" SelectedIndex="0" VerticalAlignment="Center"  Margin="5, 0, 5, 0"/>
-        <ListView  Name="LViewProduct" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="5, 5, 5, 5" d:ItemsSource="{d:SampleData ItemCount=1}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Row="0" Name="txt_filter"/>
+        <Button Grid.Column="5" Grid.Row="0" Content="Добавить" Click="AddButton" HorizontalAlignment="Center" VerticalAlignment="Top" Height="43" Width="190"/>
+        <Button x:Name="btn_sort" Click="btn_sort_Click" Grid.Column="3" Content="Сортировать"/>
+        <Button x:Name="btn_clear" Click="btn_clear_Click" Grid.Column="4" Content="Очистить"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" Name="cmb_filter">
+            <ComboBoxItem Content="По возрастанию"/>
+            
+            <ComboBoxItem Content="По убыванию"/>
+        </ComboBox>
+        <ComboBox Grid.Row="0" Grid.Column="2" x:Name="cmb_filter2">
+            <ComboBoxItem Content="По имени" />
+            <ComboBoxItem Content="По фамилии"/>
+        </ComboBox>
+        <ListView x:Name="LbSpisok" Grid.Row="1" Grid.ColumnSpan="5"
+                 ItemTemplate="{StaticResource listTemplate}"
+                 ItemsPanel="{StaticResource listPanelTemplate}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
             <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
                 </Style>
             </ListView.ItemContainerStyle>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1" Background="{Binding Background}">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="100"/>
-                                <RowDefinition Height="100"/>
-                            </Grid.RowDefinitions>
-                            <Image Width="100" Height="100" Margin="5"/>
-                            <StackPanel Grid.Column="1" Grid.Row="2" Margin="5">
-                                <TextBlock Text="{Binding Imia}" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Familia}"/>
-                                <TextBlock Text="{Binding Otchestvo}"/>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding KodRoli}"/>
-                                    <TextBlock Text="{Binding NomerTelefona}"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
         </ListView>
     </Grid>
-</Window>
+</Page>

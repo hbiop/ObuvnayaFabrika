@@ -51,7 +51,12 @@ namespace ObuvnayaFabrika.Pages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateleyReal.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateleyNew.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages/TecushiyPolzovatel.xaml", UriKind.Relative));
         }
     }
     

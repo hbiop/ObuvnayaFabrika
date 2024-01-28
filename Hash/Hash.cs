@@ -11,13 +11,21 @@ namespace Hash
     {
         public static string HashPassword(string Password)
         {
-            using (SHA256 sha256Hash = SHA256.Create())
+            if (Password != "")
             {
-                byte[] sourceBytePassw = Encoding.UTF8.GetBytes(Password);
-                byte[] hashSourceBytePassw  = sha256Hash.ComputeHash(sourceBytePassw);
-                string HashPassw = BitConverter.ToString(hashSourceBytePassw).Replace("-", String.Empty);
-                return HashPassw;
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+                    byte[] sourceBytePassw = Encoding.UTF8.GetBytes(Password);
+                    byte[] hashSourceBytePassw = sha256Hash.ComputeHash(sourceBytePassw);
+                    string HashPassw = BitConverter.ToString(hashSourceBytePassw).Replace("-", String.Empty);
+                    return HashPassw;
+                }
             }
+            else
+            {
+                return Password;
+            }
+
         }
     }
 }

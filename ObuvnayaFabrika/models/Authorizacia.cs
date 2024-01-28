@@ -18,11 +18,11 @@ namespace ObuvnayaFabrika.models
         [Key]
         public int KodAuthorizacii { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Не указан логин")]
         [StringLength(50)]
         public string Login { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Не указан пароль")]
         public string Parol { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

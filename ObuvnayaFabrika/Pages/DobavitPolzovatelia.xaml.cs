@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace ObuvnayaFabrika.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SpisokPolzovateleyReal.xaml
+    /// Логика взаимодействия для DobavitPolzovatelia.xaml
     /// </summary>
-    public partial class SpisokPolzovateleyReal : Page
+    public partial class DobavitPolzovatelia : Page
     {
-        public SpisokPolzovateleyReal()
+        public DobavitPolzovatelia()
         {
             InitializeComponent();
-            var Sotrudniki = Helper.GetContext().Sotrudniki.ToList();
-            LViewProduct.ItemsSource = Sotrudniki;
         }
     }
 }
