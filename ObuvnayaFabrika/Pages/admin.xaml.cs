@@ -27,7 +27,9 @@ namespace ObuvnayaFabrika.Pages
             getTime(label, Fio);
             
         }
- 
+        /// <summary>
+        /// Метод для определения времени суток и вывода сообщения в соответствии с временем суток
+        /// </summary>
         private static void getTime(Label label, string Fio)
         {
             if(DateTime.Now.Hour  < 12)
@@ -43,20 +45,24 @@ namespace ObuvnayaFabrika.Pages
                 label.Content = "Доброе вечер,  " + Fio;
             }
         }
-
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateley.xaml", UriKind.Relative));
         }
-
+        /// <summary>
+        /// Обработчик нажатия кнопки для перемещения на вкладку со списком пользователей
+        /// </summary>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("Pages/SpisokPolzovateleyNew.xaml", UriKind.Relative));
         }
-
+        /// <summary>
+        /// Обработчик нажатия кнопки для перемещения на вкладку для добавления пользователя
+        /// </summary>
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages/TecushiyPolzovatel.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages/Check.xaml", UriKind.Relative));
         }
     }
     

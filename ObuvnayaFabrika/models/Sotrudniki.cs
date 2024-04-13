@@ -37,7 +37,7 @@ namespace ObuvnayaFabrika.models
 
         [Required(ErrorMessage = "Почта не указана")]
         [StringLength(50, MinimumLength = 10)]
-        [RegularExpression(@"[a-zA-z0-9]+\@[a-zA-z0-9]+", ErrorMessage = "Почта в неправильном формате")]
+        //[RegularExpression(@"[a-zA-z0-9]+\@[a-zA-z0-9]+", ErrorMessage = "Почта в неправильном формате")]
         public string Pochta { get; set; }
         [Required]
         public int Brigada { get; set; }

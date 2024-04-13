@@ -11,7 +11,7 @@ namespace Hash
     {
         public static string HashPassword(string Password)
         {
-            if (Password != "")
+            if (Password.Trim() != "")
             {
                 using (SHA256 sha256Hash = SHA256.Create())
                 {

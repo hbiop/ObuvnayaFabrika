@@ -19,6 +19,6 @@
         <Button Grid.Column="2"  Content="Список сотрудников" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="38" Width="190" Click="Button_Click"/>
         <Button Grid.Column="2" Content="Список сотрудников 2" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="42" Width="190" Click="Button_Click_1"/>
         <Button Grid.Column="2" Content="Добавить" Click="Button_Click_2" HorizontalAlignment="Center" Margin="0,225,0,0" VerticalAlignment="Top" Height="43" Width="190"/>
-
+        <Button Grid.Column="2" Content="Чек" Click="Button_Click_2" HorizontalAlignment="Center" Margin="0,225,0,0" VerticalAlignment="Top" Height="43" Width="190"/>
     </Grid>
 </Page>

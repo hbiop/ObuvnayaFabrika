@@ -67,7 +67,6 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.Properties.Resources.resources
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.GenerateResource.cache
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.CoreCompileInputs.cache
-C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.CopyComplete
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.exe
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.pdb
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\Captcha.dll
@@ -86,3 +85,9 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\TecushiyPolzovatel.baml
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\DobavitPolzovatelia.g.cs
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\DobavitPolzovatelia.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\Autentifikacia.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\Autentifikacia.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\Check.g.cs
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\Check.baml
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Obuvnaya.AA275DA2.Up2Date

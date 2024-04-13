@@ -47,7 +47,6 @@ namespace ObuvnayaFabrika.Pages
             cmbRol.DisplayMemberPath = "NaimenovanieRoli";
             cmbRol.ItemsSource = roli;
             tbLogin.Text = authorizacia.Where(t => t.KodAuthorizacii == Polzovatel.KodParolia).FirstOrDefault().Login;
-            //tbparol.Text = authorizacia.Where(t => t.KodAuthorizacii == Polzovatel.KodParolia).FirstOrDefault().Parol;
             cmbBrigada.ItemsSource = brigadi;
             cmbBrigada.DisplayMemberPath = "Naimenovanie";
             tbFamilia.Text = Polzovatel.Familia;
@@ -75,7 +74,9 @@ namespace ObuvnayaFabrika.Pages
             btSave.Content = "Добавить";
             btSave.Click += addUser;
         }
-
+        /// <summary>
+        /// Обработчик кнопки для сохранения полььзователя
+        /// </summary>
         private void saveUser(object sender, RoutedEventArgs e)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -139,6 +140,9 @@ namespace ObuvnayaFabrika.Pages
                 }
             }
         }
+        /// <summary>
+        /// обработчик нажатия для добавления 
+        /// </summary>
         private void addUser(object sender, RoutedEventArgs e)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -146,7 +150,7 @@ namespace ObuvnayaFabrika.Pages
             Polzovatel = new Sotrudniki();
             var authorizacia = new Authorizacia();
             authorizacia.Login = tbLogin.Text;
-            
+
             authorizacia.Parol = Hash.Hash.HashPassword(tbparol.Text);
             Polzovatel.Brigada = brigadi.Where(t => t.Naimenovanie == cmbBrigada.Text).FirstOrDefault().KodBrigadi;
             Polzovatel.KodRoli = roli.Where(t => t.NaimenovanieRoli == cmbRol.Text).FirstOrDefault().KodRoli;
@@ -168,7 +172,7 @@ namespace ObuvnayaFabrika.Pages
                     stringBuilder.AppendLine(error.ErrorMessage);
 
                 }
-                foreach(var error in ResultPolzovatel)
+                foreach (var error in ResultPolzovatel)
                 {
                     stringBuilder.AppendLine(error.ErrorMessage);
                 }
@@ -178,7 +182,7 @@ namespace ObuvnayaFabrika.Pages
             {
                 db.Authorizacia.Add(authorizacia);
                 db.SaveChanges();
-                
+
                 Polzovatel.KodParolia = authorizacia.KodAuthorizacii;
                 if (!Validator.TryValidateObject(Polzovatel, ContextPolzovatel, ResultPolzovatel, true))
                 {
@@ -194,6 +198,12 @@ namespace ObuvnayaFabrika.Pages
                 {
                     db.Sotrudniki.Add(Polzovatel);
                     db.SaveChanges();
+                    Word helper = new Word("C:\\college\\разработка программных модулей\\docs\\blank-trudovogo-dogovora_with_tags.docx");
+                    var items = new Dictionary<string, string>
+                    {
+                        { "<RABOTODATEL>", "ООО \'фабрика\'"}
+                    };
+                    helper.Process(items);
                     MessageBox.Show("Пользователь создан");
                 }
             }

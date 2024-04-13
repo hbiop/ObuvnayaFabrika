@@ -38,8 +38,14 @@ namespace ObuvnayaFabrika.Pages
             this.NavigationService.Navigate(tecushiyPolzovatel);
             //this.NavigationService.Navigate(new Uri("Pages/TecushiyPolzovatel.xaml", UriKind.Relative));
         }
+        /// <summary>
+        /// обработчик нажатия на кнопку сортировать
+        /// </summary>
         private void btn_sort_Click(object sender, RoutedEventArgs e)
         { 
+            /*В этом методе реализуется сортировка
+             Пользователь выбирает значения из combobox для сортировки и по ним производится сортировка 
+             */ 
             sotr = Helper.GetContext().Sotrudniki.Where(t => t.Imia.Contains(txt_filter.Text) || t.Familia.Contains(txt_filter.Text)||t.Familia.Contains(txt_filter.Text)).ToList();
            
             if(cmb_filter.Text == "По возрастанию")
@@ -67,13 +73,21 @@ namespace ObuvnayaFabrika.Pages
             }
             LbSpisok.ItemsSource = sotr;
         }
-
+        /// <summary>
+        /// Обработчик нажатия на кнопку очистить
+        /// </summary>
         private void btn_clear_Click(object sender, RoutedEventArgs e)
         {
-            sotr = Helper.GetContext().Sotrudniki.ToList();
-            LbSpisok.ItemsSource = sotr;
+            PrintDialog pd = new PrintDialog();
+            if(pd.ShowDialog() == true)
+            {
+                IDocumentPaginatorSource idp = flowdoc;
+                pd.PrintDocument(idp.DocumentPaginator, Title);
+            }
         }
-
+        /// <summary>
+        /// Обработчик нажатия на кнопку добавить
+        /// </summary>
         private void AddButton(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("Pages/TecushiyPolzovatel.xaml", UriKind.Relative));

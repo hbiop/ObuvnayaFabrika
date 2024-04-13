@@ -38,7 +38,7 @@
         <TextBox Grid.Row="0" Name="txt_filter"/>
         <Button Grid.Column="5" Grid.Row="0" Content="Добавить" Click="AddButton" HorizontalAlignment="Center" VerticalAlignment="Top" Height="43" Width="190"/>
         <Button x:Name="btn_sort" Click="btn_sort_Click" Grid.Column="3" Content="Сортировать"/>
-        <Button x:Name="btn_clear" Click="btn_clear_Click" Grid.Column="4" Content="Очистить"/>
+        <Button x:Name="btn_clear" Click="btn_clear_Click" Grid.Column="4" Content="Печать"/>
         <ComboBox Grid.Row="0" Grid.Column="1" Name="cmb_filter">
             <ComboBoxItem Content="По возрастанию"/>
             
@@ -48,15 +48,23 @@
             <ComboBoxItem Content="По имени" />
             <ComboBoxItem Content="По фамилии"/>
         </ComboBox>
-        <ListView x:Name="LbSpisok" Grid.Row="1" Grid.ColumnSpan="5"
-                 ItemTemplate="{StaticResource listTemplate}"
-                 ItemsPanel="{StaticResource listPanelTemplate}"
-                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+        <FlowDocumentReader Grid.Column="0" Grid.Row ="1" Grid.ColumnSpan="5">
+            <FlowDocument Name="flowdoc">
+                <BlockUIContainer>
+                    <ListView x:Name="LbSpisok" Grid.Row="1" Grid.ColumnSpan="5"
+                    ItemTemplate="{StaticResource listTemplate}"
+                    ItemsPanel="{StaticResource listPanelTemplate}"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentReader>
     </Grid>
 </Page>
+
+    

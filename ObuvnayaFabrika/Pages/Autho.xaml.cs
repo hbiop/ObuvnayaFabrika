@@ -33,10 +33,16 @@ namespace ObuvnayaFabrika.Pages
             dispatcherTimer.Tick += new EventHandler(DispatcherTimer_Tick);
         }
         private static int unsuccesful = 0;
+        /// <summary>
+        /// Обработчик нажатия на кнопку войти как гость
+        /// </summary>
         private void btnEnterGuests_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Client());
         }
+        /// <summary>
+        /// Обработчик нажатия на кнопку войти
+        /// </summary>
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             string login = txtlogin.Text.Trim();
@@ -53,20 +59,19 @@ namespace ObuvnayaFabrika.Pages
                             var Polzovatel = Helper.GetContext().Sotrudniki.Where(t => User.KodAuthorizacii == t.KodParolia).FirstOrDefault();
                             string Fio = Polzovatel.Imia + " " + Polzovatel.Familia + " " + Polzovatel.Otchestvo;
                             int KodRoli = Polzovatel.KodRoli;
+                            //Autentifikacia auth = new Autentifikacia(Polzovatel, KodRoli);
+                            //this.NavigationService.Navigate(auth);
                             switch (KodRoli)
-                            {
+                                {
                                 case 1:
                                     polzovatel Polzovatel2 = new polzovatel(Fio);
                                     this.NavigationService.Navigate(Polzovatel2);
-                                    //this.NavigationService.Navigate(new Uri("Pages/polzovatel.xaml", UriKind.Relative));
                                     break;
                                 case 2:
                                     admin Admin = new admin(Fio);
                                     this.NavigationService.Navigate(Admin);
-                                    //this.NavigationService.Navigate(new Uri("Pages/admin.xaml", UriKind.Relative));
                                     break;
                             }
-
                         }
                         else
                         {
@@ -138,7 +143,6 @@ namespace ObuvnayaFabrika.Pages
             txtBlockCaptcha.Text = captcha;
         }
         static int remainingTime;
-       
         private void startTimer()
         {
             remainingTime = 11;
@@ -181,6 +185,12 @@ namespace ObuvnayaFabrika.Pages
                 btnEnter.Visibility = Visibility.Visible;
                 dispatcherTimer.Stop();
             }
+        }
+
+        private void btnFogetPassword_click(object sender, RoutedEventArgs e)
+        {
+            Autentifikacia auth = new Autentifikacia();
+            this.NavigationService.Navigate(auth);
         }
     }
 }

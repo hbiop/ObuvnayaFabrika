@@ -1,0 +1,32 @@
+﻿<Page x:Class="ObuvnayaFabrika.Pages.Check"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ObuvnayaFabrika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Check"  Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentReader Grid.Row="0">
+            <FlowDocument Name="flowdoc"> 
+                <BlockUIContainer>
+                    <StackPanel>
+                        <TextBlock Text="Дата заказа"/>
+                        <TextBlock Name="tb_data" Text=""/>
+                        <TextBlock Text="Время заказа"/>
+                        <TextBlock x:Name="tb_vremia" Text=""/>
+                        <TextBlock Text="Сумма"/>
+                        <TextBlock x:Name="tb_summa" Text=""/>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentReader>
+        <Button Content="Печать" Grid.Row="1" Click="Button_Click"/>
+    </Grid>
+</Page>

@@ -24,8 +24,8 @@ namespace ObuvnayaFabrika.Pages
         public SpisokPolzovateley()
         {
             InitializeComponent();
-            var Sotrudniki = Helper.GetContext().Sotrudniki.ToList();
-            LViewProduct.ItemsSource = Sotrudniki;
+            var Sotrudniki = Helper.GetContext().Sotrudniki.ToList();//Получаем список всех сотрудников
+            LViewProduct.ItemsSource = Sotrudniki;//Передаём список продуктов в listview
         }
     }
 }
