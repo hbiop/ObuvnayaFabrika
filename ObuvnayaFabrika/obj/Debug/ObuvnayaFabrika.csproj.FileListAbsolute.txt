@@ -91,3 +91,4 @@ C:\college\разработка программных модулей\ObuvnayaFa
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Pages\Check.baml
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\Obuvnaya.AA275DA2.Up2Date
+C:\college\разработка программных модулей\ObuvnayaFabrika — текущая\ObuvnayaFabrika\obj\Debug\ObuvnayaFabrika.csproj.ResolveComReference.cache

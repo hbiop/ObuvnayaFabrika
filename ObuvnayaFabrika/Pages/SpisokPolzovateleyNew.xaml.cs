@@ -42,11 +42,11 @@ namespace ObuvnayaFabrika.Pages
         /// обработчик нажатия на кнопку сортировать
         /// </summary>
         private void btn_sort_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             /*В этом методе реализуется сортировка
              Пользователь выбирает значения из combobox для сортировки и по ним производится сортировка 
-             */ 
-            sotr = Helper.GetContext().Sotrudniki.Where(t => t.Imia.Contains(txt_filter.Text) || t.Familia.Contains(txt_filter.Text)||t.Familia.Contains(txt_filter.Text)).ToList();
+             */
+            /*sotr = Helper.GetContext().Sotrudniki.Where(t => t.Imia.Contains(txt_filter.Text) || t.Familia.Contains(txt_filter.Text)||t.Familia.Contains(txt_filter.Text)).ToList();
            
             if(cmb_filter.Text == "По возрастанию")
             {
@@ -71,7 +71,8 @@ namespace ObuvnayaFabrika.Pages
                 }
                 sotr.Reverse();
             }
-            LbSpisok.ItemsSource = sotr;
+            LbSpisok.ItemsSource = sotr;*/
+            Word.Excel(sotr);
         }
         /// <summary>
         /// Обработчик нажатия на кнопку очистить

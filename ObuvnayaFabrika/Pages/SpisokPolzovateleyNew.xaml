@@ -37,7 +37,7 @@
         </Grid.ColumnDefinitions>
         <TextBox Grid.Row="0" Name="txt_filter"/>
         <Button Grid.Column="5" Grid.Row="0" Content="Добавить" Click="AddButton" HorizontalAlignment="Center" VerticalAlignment="Top" Height="43" Width="190"/>
-        <Button x:Name="btn_sort" Click="btn_sort_Click" Grid.Column="3" Content="Сортировать"/>
+        <Button x:Name="btn_sort" Click="btn_sort_Click" Grid.Column="3" Content="Excel"/>
         <Button x:Name="btn_clear" Click="btn_clear_Click" Grid.Column="4" Content="Печать"/>
         <ComboBox Grid.Row="0" Grid.Column="1" Name="cmb_filter">
             <ComboBoxItem Content="По возрастанию"/>

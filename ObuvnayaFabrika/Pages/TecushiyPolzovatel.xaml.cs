@@ -198,12 +198,28 @@ namespace ObuvnayaFabrika.Pages
                 {
                     db.Sotrudniki.Add(Polzovatel);
                     db.SaveChanges();
-                    Word helper = new Word("C:\\college\\разработка программных модулей\\docs\\blank-trudovogo-dogovora_with_tags.docx");
                     var items = new Dictionary<string, string>
                     {
-                        { "<RABOTODATEL>", "ООО \'фабрика\'"}
+                        { "<RABOTODATEL>", "ООО \'фабрика\'"},
+                        {"<OKLAD>", "10000" },
+                        {"<INN>", "0000" },
+                        {"<ADRESS>", "Новосибирск ул Петухова" },
+                        { "<FIO_RABOTNIKA>",  Polzovatel.Imia + " " + Polzovatel.Familia  + " " + Polzovatel.Otchestvo},
+                        {"<SERIA>", "0000" },
+                        { "<NOMER>", "111111"  },
+                        { "<VIDAN>", "ГУ  МВД НОВОСИБИРСКОЙ ОБЛАСТИ"},
+                        {"<GOROD>", "Novosibirsk" },
+                        { "<DAY>", DateTime.Now.Day.ToString()},
+                        { "<MONTH>", DateTime.Now.Month.ToString()},
+                        {"<YEAR>", DateTime.Now.Year.ToString()},
+                        {"<NAIMENOVANIE>", "oooooooooo" },
+                        {"<DIRECTOR>", "Алексей" },
+                        { "<DOLGNOST>", roli.Where(t => t.KodRoli == Polzovatel.KodRoli).FirstOrDefault().NaimenovanieRoli},
+                        { "<MESTO>", "Цех"},
+                        { "<PROD>", 10.ToString()}
+
                     };
-                    helper.Process(items);
+                    Word.Process(items);
                     MessageBox.Show("Пользователь создан");
                 }
             }
